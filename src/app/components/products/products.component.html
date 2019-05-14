@@ -1,0 +1,11 @@
+<p>
+  products works!
+</p>
+
+<ul class="search-result">
+  <li *ngFor="let product of product$ | async" >
+    
+      {{product.productName}}
+    
+  </li>
+</ul>
