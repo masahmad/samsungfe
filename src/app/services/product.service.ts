@@ -16,7 +16,6 @@ export class ProductService {
 
 
   fetchProducts(): Observable<Product[]> {
-    console.log('xxx', `${config.apiUri}/${config.apiProd}`)
     return this.http.get<Product[]>(`${config.apiUri}/${config.apiProd}`)
       .pipe(
         catchError(this.handleError<Product[]>('fetchProducts', []))
